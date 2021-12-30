@@ -33,7 +33,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "com.skydoves.themovies2.runner.AndroidJunitTestRunner"
-        buildConfigField "String", "TMDB_API_KEY", "\"${getProperty("local.properties", "tmdb_api_key")}\""
+        //buildConfigField "String", "TMDB_API_KEY", "\"${getProperty("local.properties", "tmdb_api_key")}\""
+        buildConfigField "String", "TMDB_API_KEY", "\"82954ac0cf87ab317b6e3c030dfbfd9d\""
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -103,9 +104,9 @@ dependencies {
     // optional - Test helpers for LiveData
     testImplementation("androidx.arch.core:core-testing:$archVersion")
     // Annotation processor
-    kapt("androidx.lifecycle:lifecycle-compiler:$lifecycleVersion")
+    //kapt("androidx.lifecycle:lifecycle-compiler:$lifecycleVersion")
     // alternately - if using Java8, use the following instead of lifecycle-compiler
-    //implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion")
     // optional - helpers for implementing LifecycleOwner in a Service
     implementation("androidx.lifecycle:lifecycle-service:$lifecycleVersion")
     // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
